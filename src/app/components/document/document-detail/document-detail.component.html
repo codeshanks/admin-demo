@@ -1,0 +1,23 @@
+
+  <ul ngbNav #nav="ngbNav" class="nav-tabs">
+    <li [ngbNavItem]="1">
+      <a ngbNavLink>Settings</a>
+      <ng-template ngbNavContent>
+        {{this.documentId}}
+      </ng-template>
+    </li>
+    <li [ngbNavItem]="2">
+      <a ngbNavLink>Uploads</a>
+      <ng-template ngbNavContent>
+        Settings!
+      </ng-template>
+    </li>
+    <li [ngbNavItem]="3">
+      <a ngbNavLink>Actions</a>
+      <ng-template ngbNavContent>
+        Settings!
+      </ng-template>
+    </li>
+  </ul>
+  <div [ngbNavOutlet]="nav" class="mt-2"></div>
+

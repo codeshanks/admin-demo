@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="col-md-3 grid-margin">
+    <div class="card">
+      <div class="card-body">
+        <app-document-list
+        [companyId]="this.companyId"
+        (documentId)="onSelected($event)">
+        </app-document-list>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-9 grid-margin">
+    <div class="card">
+      <div class="card-body">
+        <app-document-detail
+        [documentId]="this.documentId"></app-document-detail>
+      </div>
+    </div>
+  </div>
+</div>

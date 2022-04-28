@@ -1,0 +1,37 @@
+<h5>{{this.name}}</h5>
+<div class="m-3">
+  <ul ngbNav #nav="ngbNav" class="nav-tabs">
+    <li [ngbNavItem]="1">
+      <a ngbNavLink>Settings</a>
+      <ng-template ngbNavContent>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="CompanyName">Company Name</label>
+            <input type="text" [(ngModel)]="company.CompanyName" class="form-control" id="CompanyName" placeholder="">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="URLSuffix">URLSuffix</label>
+            <input type="text" [(ngModel)]="company.URLSuffix" class="form-control" id="URLSuffix" placeholder="">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="ReportingName">ReportingName</label>
+            <input type="text" [(ngModel)]="company.ReportingName" class="form-control" id="ReportingName" placeholder="">
+          </div>
+        </div>
+      </ng-template>
+    </li>
+    <li [ngbNavItem]="2">
+      <a ngbNavLink>Documents</a>
+      <ng-template ngbNavContent>
+        <app-document-container
+        [companyId]="this.companyId">
+        </app-document-container>
+      </ng-template>
+    </li>
+  </ul>
+  <div [ngbNavOutlet]="nav" class="mt-2"></div>
+</div>

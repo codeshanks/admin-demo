@@ -1,0 +1,9 @@
+<div class="table-responsive">
+  <table class="table table-hover">
+    <tbody>
+      <tr *ngFor="let document of documents" (click)="selectDoc(document.eformId)">
+        <td>{{document.eformName}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
